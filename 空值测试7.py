@@ -1,0 +1,12 @@
+import requests
+
+
+header = {
+    'Cookie':'_octo=GH1.1.1249715225.1535962808; logged_in=no; _ga=GA1.2.684839310.1535962821; has_recent_activity=1; tz=Asia%2FShanghai; _gh_sess=eEJGM1VMcU91bGpRNU1TVmVEQStYU3ZjbUlaRHRGbVJ0TTBqNE1nb1JnRG5TY3hNWnJSMjdLcUVmWURTMXppZ3RwMUYvZ3o5WlNFQk5jL2MzLzVQWXVhUmZ4VmVqRTFFWnlFaVZaaTRNbHhDUUFnWnZRRUhwRG1KS3lvT1lEVWFHL3YxaWdJU3dzN04vcWhsQmx5dHpGc1lBaWxtUWdISjd3cWFuUHlZaXg5QUpob3ZzRUUrWFFIazJuWkU0bUFPZ3I0L1pTMTI0bDIrNVR4QURndnNIcTRHUWhoQlZYNS92b0MzSy9hT0FYSlhWKzlEOEh5cVJrZEZBcXhiKzBtV3g3aTczUFVzalF4R1dyYTlTQ3kvblFxQ3FPbTh3azlkclptMW5tdS9oVXNUbWpqT3R2WU1GTjRVcWszTURsTjFiMmN6VUlVQ3I2R3pmS2wzWEJKN1hSeUdScm8xS3JWM2lCeis1SWtVKzNyVDc0cGhmSzUrY3hyNzNHbGMwRllaWDBPVGRVNURjRzBCcS9tdVYzbjZCS2grd1hOd1VhU1k1NHJCYjI3U1JzQm85UWJWK3hHbUVGdm9Ya05VM3k1cUVBcjdZaWFtcWtjUnUyY1VYWFoyeFNzdVU5cUlKalRXdGdzOS92TnNBc2pMQjk4YlFMeFpJZnVNb0hlaUVJNnVNNW03YVc0UTcrbStySWlZd09WV3ZRPT0tLXZlbW5QcXEzWmdQTVBBa3VFQldpclE9PQ%3D%3D--346c58808d866226c8c878b754e8d3893b21cf21',
+    'Host': 'github.com',
+    "User-Agent":"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"
+}
+
+req = requests.get('https://github.com/zhouf1234',headers=header)
+req.encoding='utf-8'    #解决中文乱码
+print(req.text)
